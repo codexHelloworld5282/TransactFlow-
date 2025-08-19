@@ -1,4 +1,4 @@
-🐰 CSV RabbitMQ Processor
+#🐰 CSV RabbitMQ Processor
 
 
 
@@ -9,7 +9,7 @@
 
 A Node.js application to process CSV files in chunks, store original records in MongoDB, publish to RabbitMQ, and automatically consume messages into a processed collection.
 
-✨ Features
+#✨ Features
 
 🚀 Upload CSV via Postman (multipart/form-data)
 
@@ -23,7 +23,7 @@ A Node.js application to process CSV files in chunks, store original records in 
 
 📋 Logs for every step: DB insert, message publishing, and consumption
 
-🛠 Tech Stack
+#🛠 Tech Stack
 
 Node.js + Express
 
@@ -35,7 +35,7 @@ CSV parsing (csv-parser)
 
 Multer for file uploads
 
-⚡ Installation
+#⚡ Installation
 
 Clone the repo:
 
@@ -48,18 +48,18 @@ Install dependencies:
 npm install
 
 
-Create a .env file in the root:
+#Create a .env file in the root:
 
 PORT=3000
 MONGODB_URI=mongodb://localhost:27017/your_db
 RABBITMQ_URI=amqp://localhost
 
 
-Start the server:
+#Start the server:
 
 node server.js
 
-🚀 Usage
+#🚀 Usage
 
 Open Postman.
 
@@ -80,14 +80,14 @@ Send the request. The server will:
 
 ✅ Consumer saves messages to ProcessedTransaction
 
-📄 CSV Format
+#📄 CSV Format
 st_brand_id	brand_name	product_name
 1	Brand A	Product X
 2	Brand B	Product Y
 
 st_brand_id must be unique per CSV chunk.
 
-🗂 Project Structure
+#🗂 Project Structure
 .
 ├── controllers/
 │   └── transaction.controller.js
@@ -104,7 +104,7 @@ st_brand_id must be unique per CSV chunk.
 ├── server.js
 └── .env
 
-📝 Logs
+#📝 Logs
 
 ✅ DB insert successful
 
@@ -116,7 +116,7 @@ st_brand_id must be unique per CSV chunk.
 
 🐳 Optional: Run with Docker
 
-RabbitMQ Docker container
+#RabbitMQ Docker container
 
 docker run -d --hostname rabbitmq --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
 
@@ -127,6 +127,4 @@ Default user/pass: guest/guest
 
 Start your Node.js app (ensure .env points to amqp://localhost)
 
-📦 License
 
-MIT © Eisha Ayub
